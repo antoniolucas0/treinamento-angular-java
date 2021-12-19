@@ -4,7 +4,6 @@ import { Cliente } from 'src/app/interfaces/cliente';
 import { ClienteService } from 'src/app/services/cliente.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
-
 @Component({
   selector: 'app-cadastrar-editar-cliente',
   templateUrl: './cadastrar-editar-cliente.component.html',
@@ -20,22 +19,24 @@ export class CadastrarEditarClienteComponent implements OnInit {
     observacoes: new FormControl(''),
     ativo: new FormControl(true)
   });
-
-
   constructor(private clienteService: ClienteService, private router: Router) { }
 
   ngOnInit(): void {
   }
-
   enviar() {
     const cliente: Cliente = this.formGroup.value;
     this.clienteService.createClient(cliente).subscribe(clienteApi => {
       Swal.fire({
-        icon: 'success', text: 'Cadastrado com sucesso', showConfirmButton: false, timer: 1500 })
+        icon: 'success',
+        title: 'Sucesso',
+        text: 'Cadastrado com sucesso',
+        showConfirmButton: false,
+        timer: 1500
+      })
       console.log(clienteApi);
       this.router.navigate(['/clientes']);
     }, error => {
-      console.error(error)
+      Swal.fire('Erro, tente novamente!','error');
     })
   }
 

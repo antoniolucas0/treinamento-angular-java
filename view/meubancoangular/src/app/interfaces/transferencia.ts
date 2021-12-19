@@ -1,14 +1,7 @@
 export interface Transferencia {
-  agenciaOrigem: string;
-  numeroContaOrigem: string;
-  agenciaDestino: string;
-  numeroContaDestino: string;
-  valor: number;
-
+  agenciaDestino: string,
+  agenciaOrigem: string,
+  numeroContaDestino: string,
+  numeroContaOrigem: string,
+  valor: number
 }
-
-
-
-
-
-

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
 import { SaqueDeposito } from 'src/app/interfaces/saque-deposito';
 import { ContaService } from 'src/app/services/conta.service';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -28,13 +28,13 @@ export class DepositoComponent implements OnInit {
     this.contaService.deposito(deposito).subscribe(contaApi => {
       Swal.fire({
         icon: 'success',
-        text: 'Efetuado com sucesso',
+        text: 'Efetuado Com Sucesso',
         showConfirmButton: false,
         timer: 1500
       });
       this.router.navigate(['/contas']);
     }, error => {
-      console.error(error)
+      Swal.fire('Erro, tente novamente!','error');
     });
 
 

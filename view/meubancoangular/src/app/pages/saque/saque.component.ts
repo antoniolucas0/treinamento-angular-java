@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
 import { ContaService } from 'src/app/services/conta.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { SaqueDeposito } from 'src/app/interfaces/saque-deposito';
-
 @Component({
   selector: 'app-saque',
   templateUrl: './saque.component.html',
@@ -13,12 +11,10 @@ import { SaqueDeposito } from 'src/app/interfaces/saque-deposito';
 })
 export class SaqueComponent implements OnInit {
 
-
   constructor(private contaService: ContaService, private router: Router) { }
 
   ngOnInit(): void {
   }
-
   formGroup: FormGroup = new FormGroup({
     agencia: new FormControl('', Validators.required),
     numeroConta: new FormControl('', Validators.required),
@@ -36,10 +32,7 @@ export class SaqueComponent implements OnInit {
       });
       this.router.navigate(['/contas']);
     }, error => {
-      Swal.fire('Error',
-      'Houve algum erro, tente novamente!');
+      Swal.fire('Erro, tente novamente!','error');
     });
-
-
   }
 }

@@ -29,6 +29,7 @@ export class ClientesComponent implements OnInit {
   deletar(id: number) {
     Swal.fire({
       title: 'Você tem certeza que deseja deletar?',
+      text: "Não tem como reverter essa ação",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: 'red',
@@ -46,7 +47,7 @@ export class ClientesComponent implements OnInit {
         }, error => {
           Swal.fire({
             icon: 'error',
-            text: 'Não é possível deletar o usuário',
+            text: 'Não é possível deletar esse usuário',
           })
         })
 

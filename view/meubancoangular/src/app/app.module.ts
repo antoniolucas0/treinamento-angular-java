@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -28,15 +29,14 @@ import { CadastrarEditarContaComponent } from './pages/contas/cadastrar-editar-c
     SaqueComponent,
     DepositoComponent,
     HomeComponent,
+    LabelInputComponent,
+    CheckboxComponent,
+    ButtonComponent,
     ClientesComponent,
     ContasComponent,
     CadastrarEditarClienteComponent,
     TransferenciaComponent,
     CadastrarEditarContaComponent,
-    LabelInputComponent,
-    CheckboxComponent,
-    ButtonComponent,
-
   ],
   imports: [
     BrowserModule,

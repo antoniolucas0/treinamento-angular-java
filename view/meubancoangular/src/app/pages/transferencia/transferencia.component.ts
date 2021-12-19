@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Transferencia } from 'src/app/interfaces/transferencia';
 import { ContaService } from 'src/app/services/conta.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
-
+import { Transferencia } from 'src/app/interfaces/transferencia';
 @Component({
   selector: 'app-transferencia',
   templateUrl: './transferencia.component.html',
@@ -28,11 +27,14 @@ export class TransferenciaComponent implements OnInit {
     const transferencia: Transferencia = this.formGroup.value;
     this.contaService.transferencia(transferencia).subscribe(contaApi => {
       Swal.fire({
-        icon: 'success', text: 'Transferência realizada com sucesso', showConfirmButton: false });
+        icon: 'success',
+        text: 'Efetuado com sucesso!',
+        showConfirmButton: false,
+        timer: 1500
+      });
       this.router.navigate(['/contas']);
     }, error => {
-      Swal.fire('Error',
-      'Houve algum erro, tente novamente!');
+      Swal.fire('Erro, tente novamente!','error');
     });
 
   }

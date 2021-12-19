@@ -1,19 +1,20 @@
 <h1 class="mt-5 mb-4">Depósito</h1>
 
-
 <form [formGroup]="formGroup" class="mb-3" (ngSubmit)="depositar()">
   <div class="row">
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Conta</label>
       <input type="text" class="form-control" formControlName="numeroConta">
     </div>
+
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Agência</label>
       <input type="text" class="form-control" formControlName="agencia">
     </div>
+
     <div class="col">
-      <label for="exampleFormControlInput1" class="form-label">Informe o Valor</label>
-      <input type="number" class="form-control" formControlName="valor">
+      <label for="exampleFormControlInput1" class="form-label">Valor</label>
+      <input type="text" class="form-control" formControlName="valor">
     </div>
   </div>
 

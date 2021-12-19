@@ -9,19 +9,18 @@ import { ContaService } from 'src/app/services/conta.service';
 })
 export class ContasComponent implements OnInit {
 
-  contas: any[] = [];
+  contas: Conta[] = [];
 
-  constructor(private contasService: ContaService) { }
+  constructor(private contaService: ContaService) { }
 
   ngOnInit(): void {
     this.listarTodasContas();
   }
 
   listarTodasContas() {
-    this.contasService.allContas().subscribe(contasApi => {
+    this.contaService.allContas().subscribe(contasApi => {
       this.contas = contasApi;
     });
-
-
   }
+
 }

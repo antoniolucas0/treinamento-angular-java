@@ -3,13 +3,19 @@
     <h1 class="mt-5 mb-4">Clientes</h1>
   </div>
   <div class="col-2">
-    <a class="btn btn-outline-info" routerLink="cadastrar">Novo cliente</a>
+    <a class="btn btn-outline-primary" routerLink="cadastrar">Cadastrar Novo Cliente</a>
   </div>
 </div>
 
 <div *ngIf="!clientes.length">
-  <div class="spinner-border spinner-border-sm" role="status">
-    <span class="visually-hidden">Loading...</span>
+  <div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden m-3">Loading...</span>
+  </div>
+  <div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden m-3">Loading...</span>
+  </div>
+  <div class="spinner-grow text-primary" role="status">
+    <span class="visually-hidden m-3">Loading...</span>
   </div>
   </div>
 
@@ -24,7 +30,6 @@
       <th scope="col">Ações</th>
     </tr>
   </thead>
-
   <tbody>
     <tr *ngFor="let cliente of clientes;">
       <td>{{ cliente.nome }}</td>
