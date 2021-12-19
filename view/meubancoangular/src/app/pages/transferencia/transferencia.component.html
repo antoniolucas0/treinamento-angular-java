@@ -4,16 +4,12 @@
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Conta de origem</label>
       <input type="text" class="form-control" formControlName="numeroContaOrigem">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('numeroContaOrigem')?.errors &&
-      formGroup.get('numeroContaOrigem')?.hasError('required')">Campo obrigatório!</small>
     </div>
 
 
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Agência de origem</label>
       <input type="text" class="form-control" formControlName="agenciaOrigem">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('agenciaOrigem')?.errors &&
-      formGroup.get('agenciaOrigem')?.hasError('required')">Campo obrigatório!</small>
     </div>
   </div>
 
@@ -21,15 +17,11 @@
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Conta de destino</label>
       <input type="text" class="form-control" formControlName="numeroContaDestino">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('numeroContaDestino')?.errors &&
-      formGroup.get('numeroContaDestino')?.hasError('required')">Campo obrigatório!</small>
     </div>
 
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Agência de destino</label>
       <input type="text" class="form-control" formControlName="agenciaDestino">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('agenciaDestino')?.errors &&
-      formGroup.get('agenciaDestino')?.hasError('required')">Campo obrigatório!</small>
     </div>
   </div>
 
@@ -38,8 +30,6 @@
     <div class="col-6">
       <label for="exampleFormControlInput1" class="form-label">Informe o Valor</label>
       <input type="text" class="form-control" formControlName="valor">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('valor')?.errors &&
-      formGroup.get('valor')?.hasError('required')">Campo obrigatório!</small>
     </div>
   </div>
 

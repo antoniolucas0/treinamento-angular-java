@@ -6,14 +6,11 @@
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Conta</label>
       <input type="text" class="form-control" formControlName="numero">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('numero')?.errors &&
-      formGroup.get('numero')?.hasError('required')">Campo obrigatório!</small>
     </div>
+
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Agência</label>
       <input type="text" class="form-control" formControlName="agencia">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('agencia')?.errors &&
-      formGroup.get('agencia')?.hasError('required')">Campo obrigatório!</small>
     </div>
 
   </div>
@@ -24,14 +21,10 @@
 
         <option *ngFor="let cliente of clientes;" value="{{cliente.id}}">{{cliente.nome}}</option>
       </select>
-      <small class="text-danger mb-2" *ngIf="formGroup.get('cliente')?.errors &&
-      formGroup.get('cliente')?.hasError('required')">Campo obrigatório!</small>
     </div>
     <div class="col">
       <label for="exampleFormControlInput1" class="form-label">Saldo</label>
       <input type="number" class="form-control" formControlName="saldo">
-      <small class="text-danger mb-2" *ngIf="formGroup.get('saldo')?.errors &&
-      formGroup.get('saldo')?.hasError('required')">Campo obrigatório!</small>
     </div>
   </div>
 

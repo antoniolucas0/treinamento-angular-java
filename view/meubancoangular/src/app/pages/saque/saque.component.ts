@@ -36,7 +36,8 @@ export class SaqueComponent implements OnInit {
       });
       this.router.navigate(['/contas']);
     }, error => {
-      console.error(error)
+      Swal.fire('Error',
+      'Houve algum erro, tente novamente!');
     });
 
 
